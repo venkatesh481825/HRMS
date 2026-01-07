@@ -1,50 +1,34 @@
 from django.contrib import admin
-from .models import Attendance, Permission, Regularization
 
+from .models import Attendance
 
-@admin.register(Attendance)
+# Register your models here.
+
+admin.site.register(Attendance)
+
 class AttendanceAdmin(admin.ModelAdmin):
     list_display = (
-        "employee",
-        "date",
-        "status",
-        "check_in_time",
-        "check_out_time",
-        "working_hours",
-        "source",
+        'employee',
+        'date',
+        'check_in',
+        'check_out',
+        'status'
     )
-    list_filter = ("status", "source", "date")
-    search_fields = ("employee__username", "employee__email")
-    readonly_fields = ("working_hours", "created_at")
-    ordering = ("-date",)
-    date_hierarchy = "date"
 
-
-@admin.register(Permission)
-class PermissionAdmin(admin.ModelAdmin):
-    list_display = (
-        "employee",
-        "date",
-        "from_time",
-        "to_time",
-        "status",
-        "approved_by",
+    list_filter = (
+        'status',
+        'date'
     )
-    list_filter = ("status", "date")
-    search_fields = ("employee__username",)
-    readonly_fields = ("created_at",)
-    ordering = ("-date",)
 
-
-@admin.register(Regularization)
-class RegularizationAdmin(admin.ModelAdmin):
-    list_display = (
-        "employee",
-        "attendance",
-        "status",
-        "approved_by",
-        "created_at",
+    search_fields = (
+        'employee__username',
+        'employee__first_name',
+        'employee__last_name'
     )
-    list_filter = ("status", "created_at")
-    search_fields = ("employee__username",)
-    readonly_fields = ("created_at",)
+
+    ordering = ('-date',)
+
+    readonly_fields = (
+        'created_at',
+        'updated_at'
+    )
