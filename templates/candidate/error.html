@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - HRMS Onboarding</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-800 flex items-center justify-center">
+    <div class="max-w-2xl mx-auto px-5">
+        <div class="bg-white rounded-2xl shadow-2xl p-10 text-center">
+            <div class="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-red-500 to-pink-600 rounded-full mb-6">
+                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </div>
+            
+            <h1 class="text-4xl font-bold bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent mb-4">
+                {{ error_title|default:"Error" }}
+            </h1>
+            
+            <p class="text-gray-700 text-lg mb-8">
+                {{ error_message|default:"An error occurred. Please try again later." }}
+            </p>
+            
+            <div class="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-6 mb-6 border-l-4 border-red-600">
+                <h3 class="font-semibold text-red-900 mb-2">Need Help?</h3>
+                <p class="text-red-800 text-sm">
+                    If you believe this is an error, please contact our HR team for assistance. They can provide you with a new onboarding link.
+                </p>
+            </div>
+            
+            <a href="/" class="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Go to Homepage
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+
