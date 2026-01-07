@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRMS Onboarding System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-800">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-sm shadow-lg mb-10 sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-5 py-5 flex justify-between items-center">
+            <div class="text-3xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                HRMS Onboarding
+            </div>
+            <ul class="flex gap-5 list-none">
+                <li>
+                    <a href="/accounts/login/" class="text-gray-700 font-medium px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
+                        HR Login
+                    </a>
+                </li>
+                <li>
+                    <a href="/admin/" class="text-gray-700 font-medium px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
+                        Admin
+                    </a>
+                </li>
+                <li>
+                    <a href="/candidate/create/" class="text-gray-700 font-medium px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
+                        Create Candidate
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="max-w-7xl mx-auto px-5">
+        <!-- Hero Section with Gradient -->
+        <div class="text-center text-white py-16 mb-16 relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 p-1">
+            <div class="bg-gradient-to-br from-purple-600/90 via-pink-600/90 to-red-600/90 rounded-3xl p-12 backdrop-blur-sm">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 text-white drop-shadow-lg">
+                    Welcome to HRMS Onboarding System
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 text-white/95 max-w-3xl mx-auto">
+                    Streamline your employee onboarding process with our comprehensive solution
+                </p>
+                <div class="flex gap-5 justify-center flex-wrap">
+                    <a href="/admin/" class="px-8 py-3 bg-white text-purple-600 font-semibold rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300 transform">
+                        Admin Dashboard
+                    </a>
+                    <a href="/candidate/create/" class="px-8 py-3 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-lg border-2 border-white hover:bg-white/30 transition-all duration-300 transform hover:scale-105">
+                        Create Candidate
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Features Section -->
+        <div class="bg-white rounded-2xl p-10 mb-10 shadow-2xl">
+            <h2 class="text-center text-4xl font-bold mb-10 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                Key Features
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl border-l-4 border-purple-600 hover:transform hover:-translate-y-2 transition-all duration-300 shadow-md hover:shadow-xl">
+                    <h3 class="text-purple-600 font-bold text-xl mb-3">📋 Candidate Management</h3>
+                    <p class="text-gray-700">Efficiently manage candidate profiles and track their onboarding progress through each stage.</p>
+                </div>
+                <div class="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl border-l-4 border-blue-600 hover:transform hover:-translate-y-2 transition-all duration-300 shadow-md hover:shadow-xl">
+                    <h3 class="text-blue-600 font-bold text-xl mb-3">📄 Document Verification</h3>
+                    <p class="text-gray-700">Upload, verify, and manage candidate documents with an easy-to-use interface.</p>
+                </div>
+                <div class="p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl border-l-4 border-green-600 hover:transform hover:-translate-y-2 transition-all duration-300 shadow-md hover:shadow-xl">
+                    <h3 class="text-green-600 font-bold text-xl mb-3">✅ Approval Workflow</h3>
+                    <p class="text-gray-700">Multi-level approval system ensuring all stakeholders review and approve candidates.</p>
+                </div>
+                <div class="p-6 bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl border-l-4 border-orange-600 hover:transform hover:-translate-y-2 transition-all duration-300 shadow-md hover:shadow-xl">
+                    <h3 class="text-orange-600 font-bold text-xl mb-3">🔐 Secure Access</h3>
+                    <p class="text-gray-700">Role-based access control ensuring only authorized personnel can access sensitive information.</p>
+                </div>
+                <div class="p-6 bg-gradient-to-br from-pink-50 to-rose-50 rounded-xl border-l-4 border-pink-600 hover:transform hover:-translate-y-2 transition-all duration-300 shadow-md hover:shadow-xl">
+                    <h3 class="text-pink-600 font-bold text-xl mb-3">📧 Email Notifications</h3>
+                    <p class="text-gray-700">Automated email notifications keep candidates and HR informed at every step.</p>
+                </div>
+                <div class="p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl border-l-4 border-indigo-600 hover:transform hover:-translate-y-2 transition-all duration-300 shadow-md hover:shadow-xl">
+                    <h3 class="text-indigo-600 font-bold text-xl mb-3">📊 Tracking & Reporting</h3>
+                    <p class="text-gray-700">Track candidate status, background verification, and onboarding progress in real-time.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Process Flow Section -->
+        <div class="bg-white rounded-2xl p-10 mb-10 shadow-2xl">
+            <h2 class="text-center text-4xl font-bold mb-10 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                Onboarding Process Flow
+            </h2>
+            <div class="flex flex-col gap-5">
+                <div class="flex items-center gap-5 p-5 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl border-l-4 border-purple-600 hover:shadow-lg transition-shadow">
+                    <div class="bg-gradient-to-br from-purple-600 to-indigo-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                        1
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-gray-800 font-semibold text-lg mb-1">Candidate Selected & Offer Letter Issued</h4>
+                        <p class="text-gray-600">HR selects candidate and issues offer letter</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-5 p-5 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
+                    <div class="bg-gradient-to-br from-blue-600 to-cyan-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                        2
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-gray-800 font-semibold text-lg mb-1">Pre-Onboarding Started</h4>
+                        <p class="text-gray-600">Candidate profile created and pre-onboarding process initiated</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-5 p-5 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl border-l-4 border-green-600 hover:shadow-lg transition-shadow">
+                    <div class="bg-gradient-to-br from-green-600 to-emerald-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                        3
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-gray-800 font-semibold text-lg mb-1">Document Upload & Verification</h4>
+                        <p class="text-gray-600">Candidate uploads required documents, HR verifies and approves</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-5 p-5 bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl border-l-4 border-orange-600 hover:shadow-lg transition-shadow">
+                    <div class="bg-gradient-to-br from-orange-600 to-amber-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                        4
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-gray-800 font-semibold text-lg mb-1">Background Verification</h4>
+                        <p class="text-gray-600">Optional background check process to ensure candidate eligibility</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-5 p-5 bg-gradient-to-r from-pink-50 to-rose-50 rounded-xl border-l-4 border-pink-600 hover:shadow-lg transition-shadow">
+                    <div class="bg-gradient-to-br from-pink-600 to-rose-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                        5
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-gray-800 font-semibold text-lg mb-1">Internal Approvals</h4>
+                        <p class="text-gray-600">Multi-level approvals from HR, Manager, Finance, and Admin</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-5 p-5 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl border-l-4 border-indigo-600 hover:shadow-lg transition-shadow">
+                    <div class="bg-gradient-to-br from-indigo-600 to-purple-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                        6
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-gray-800 font-semibold text-lg mb-1">Employee Conversion</h4>
+                        <p class="text-gray-600">Convert candidate to employee, generate employee ID, and provision system access</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-5 p-5 bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl border-l-4 border-teal-600 hover:shadow-lg transition-shadow">
+                    <div class="bg-gradient-to-br from-teal-600 to-cyan-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                        7
+                    </div>
+                    <div class="flex-1">
+                        <h4 class="text-gray-800 font-semibold text-lg mb-1">Orientation & Confirmation</h4>
+                        <p class="text-gray-600">Conduct orientation program, assign assets, and track probation period</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-white/95 backdrop-blur-sm shadow-lg mt-10 py-8 text-center">
+        <div class="max-w-7xl mx-auto px-5">
+            <p class="text-gray-700">&copy; 2025 HRMS Onboarding System. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
