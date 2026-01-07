@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding Complete - HRMS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-800 flex items-center justify-center">
+    <div class="max-w-2xl mx-auto px-5">
+        <div class="bg-white rounded-2xl shadow-2xl p-10 text-center">
+            <div class="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full mb-6">
+                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            
+            <h1 class="text-4xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-4">
+                Profile Submitted Successfully!
+            </h1>
+            
+            {% if candidate_name %}
+            <p class="text-xl text-gray-700 mb-2">
+                Thank you, <strong class="text-purple-600">{{ candidate_name }}</strong>!
+            </p>
+            {% else %}
+            <p class="text-xl text-gray-700 mb-2">
+                Thank you!
+            </p>
+            {% endif %}
+            
+            <p class="text-gray-600 mb-8">
+                Your profile information has been received successfully! You will receive an email shortly with a link to upload your required documents.
+            </p>
+            
+            <div class="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6 mb-6 border-l-4 border-green-600">
+                <h3 class="font-semibold text-green-900 mb-2">What happens next?</h3>
+                <ul class="text-left text-green-800 space-y-2 text-sm">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 mr-2 mt-0.5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        HR will review your submitted information
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 mr-2 mt-0.5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        You'll receive further instructions via email
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 mr-2 mt-0.5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Complete any remaining onboarding steps
+                    </li>
+                </ul>
+            </div>
+            
+            <p class="text-gray-500 text-sm">
+                If you have any questions, please contact our HR team.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
